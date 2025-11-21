@@ -30,6 +30,8 @@ public class DiscreteCalculatorGUI extends JFrame implements ActionListener {
     private JButton clearButton;
     private JScrollPane scrollPane;
     private JPanel scrollPaneLayout;
+    private JLabel operationLabel;
+    private ButtonGroup radioButtonGroup;
 
 
     public DiscreteCalculatorGUI(){
@@ -41,12 +43,30 @@ public class DiscreteCalculatorGUI extends JFrame implements ActionListener {
         setContentPane(bg);
 
 
+
+        // grouping radio buttons
+        radioButtonGroup = new ButtonGroup();
+        radioButtonGroup.add(rBA);
+        radioButtonGroup.add(rBB);
+        radioButtonGroup.add(rBC);
+        radioButtonGroup.add(rBD);
+        radioButtonGroup.add(rBE);
+        radioButtonGroup.add(rBF);
+
+
         // setting scrollpane transparent
         scrollPane.getViewport().setOpaque(false);
         scrollPane.setBorder(null);
         setResizable(false);
         setVisible(true);
 
+        operationComboBox.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String seleected = (String)operationComboBox.getSelectedItem();
+                operationLabel.setText(seleected);
+            }
+        });
     }
 
 

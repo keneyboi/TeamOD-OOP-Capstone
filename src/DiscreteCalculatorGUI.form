@@ -34,8 +34,8 @@
             <properties>
               <minimumSize width="415" height="40"/>
               <model>
-                <item value="HYPERGEOMETRIC DISTRIBUTION"/>
-                <item value="BINOMIAL DISTRIBUTION"/>
+                <item value="HYPERGEOMETRIC "/>
+                <item value="BINOMIAL"/>
                 <item value="BERNOULLI"/>
                 <item value="COMBINATION"/>
                 <item value="PERMUTATION"/>
@@ -338,7 +338,7 @@
               </grid>
             </children>
           </grid>
-          <component id="5d717" class="javax.swing.JLabel">
+          <component id="5d717" class="javax.swing.JLabel" binding="operationLabel">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <gridbag top="5" left="0" bottom="8" right="0" weightx="0.0" weighty="0.0"/>
